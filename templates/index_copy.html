@@ -19,16 +19,20 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="form-inline my-2 my-lg-2">
+                <input type="text" class="form-control mr-sm-2" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0">Search</button>
+            </form>
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a href="#" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Consoles</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Games</a>
-                </li>
+{#                <li class="nav-item active">#}
+{#                    <a href="#" class="nav-link">Home</a>#}
+{#                </li>#}
+{#                <li class="nav-item">#}
+{#                    <a href="#" class="nav-link">Consoles</a>#}
+{#                </li>#}
+{#                <li class="nav-item">#}
+{#                    <a href="#" class="nav-link">Games</a>#}
+{#                </li>#}
                 <li class="nav-item">
                     <a href="#" class="nav-link" data-toggle="modal" data-target="#exampleModal">Contacts</a>
                 </li>
@@ -36,10 +40,6 @@
                     <a href="#" class="nav-link" data-toggle="modal" data-target="#ModalSignIn">Sign in</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input type="text" class="form-control mr-sm-2" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0">Search</button>
-            </form>
         </div>
     </nav>
     <div class="container-fluid p-0">
@@ -153,7 +153,7 @@
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Contacts</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">$times;</span>
+                        <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
@@ -179,14 +179,45 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="ModalSignIn" tabindex="-1" role="dialog" aria-labelledby="exampleModal" aria-hidden="true">
+    <div class="modal fade" id="ModalSignIn" tabindex="-1" role="dialog" aria-labelledby="ModalSignIn" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Sign In</h5>
+                    <h5 class="modal-title" id="ModalSignInLabel">Sign In</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">$times;</span>
+                        <span aria-hidden="true">&times;</span>
                     </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <div class="form-row">
+                                <div class="col-5">
+                                    <div class="form-froup">
+                                        <label for="InputEmail">Email address</label>
+                                        <input type="emile" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Email" required>
+                                        <small id="EmailHelp" class="form-text text-muted">Enter you email</small>
+                                    </div>
+                                </div>
+                                <div class="form-froup">
+                                    <div class="col-7">
+                                        <label for="InputPass">Password</label>
+                                        <input type="password" class="form-control" id="InputPass" placeholder="Password" required>
+                                        <small id="PassHelp" class="form-text text-muted">Пароль должен содержать не меньше 8 символов</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input">
+                                    Запомнить меня
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                Отправить
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
